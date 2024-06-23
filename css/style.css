@@ -192,7 +192,9 @@ ul {
   margin: 0 auto;
   width: 100%;
   text-align: center;
-  background-color: #3700ed;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(55, 0, 237) 100%);
+  user-select: none;
 }
 .banner span {
   max-width: 1000px;
