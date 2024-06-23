@@ -4,6 +4,20 @@
 @import "components/fonts.scss";
 @import "components/navigation.scss";
 
+.banner {
+  font-family: $montserrat-bold;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  background-color: #3700ed;
+  span {
+    max-width: 1000px;
+    color: white;
+  }
+}
+
 main {
   max-width: 1280px;
   margin: 0 auto;
@@ -41,9 +55,9 @@ section {
 
   h2 {
     font-size: 56px;
-    line-height: 1.0714285714;
+    line-height: 1;
     font-weight: 600;
-    letter-spacing: -0.005em;
+    letter-spacing: -0.045em;
     padding-bottom: .5rem;
   }
 }

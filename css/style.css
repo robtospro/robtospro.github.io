@@ -149,6 +149,7 @@ ul {
 }
 .hamburger.active span:nth-child(2) {
   opacity: 0;
+  transform: scale(0, 0.5);
 }
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -7px);
@@ -165,17 +166,37 @@ ul {
   border-left: 1px solid rgba(51, 51, 51, 0);
   border-bottom: 1px solid rgba(51, 51, 51, 0);
   border-radius: 0 0 0 1rem;
+  right: 0;
+  transform: translateX(0px);
+  transition: 0.25s;
+}
+.mobile-nav.active {
+  transform: translateX(0); /* Slide in */
   transition: 0.25s;
 }
 .mobile-nav a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
 }
 .mobile-nav.scrolled {
   border-left: 1px solid rgb(51, 51, 51);
   border-bottom: 1px solid rgb(51, 51, 51);
   transition: 0.25s;
+}
+
+.banner {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  background-color: #3700ed;
+}
+.banner span {
+  max-width: 1000px;
+  color: white;
 }
 
 main {
@@ -216,9 +237,9 @@ section {
 }
 .section h2 {
   font-size: 56px;
-  line-height: 1.0714285714;
+  line-height: 1;
   font-weight: 600;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.045em;
   padding-bottom: 0.5rem;
 }
 
@@ -287,7 +308,22 @@ footer ul#footer-links a:hover {
     display: none;
     position: absolute;
     top: 60px;
-    right: 0;
+    transition: 0.25s;
+  }
+  section {
+    padding: 0.5rem 1.5rem;
+  }
+  .section h2 {
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    padding-bottom: 0.4rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  footer .inner {
+    flex-direction: column-reverse;
+    row-gap: 6px;
   }
 }
 

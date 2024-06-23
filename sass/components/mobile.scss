@@ -12,6 +12,31 @@
     position: absolute;
     top: 60px;
     //left: 0;
-    right: 0;
+    transition: $transition-time;
+  }
+
+
+  section {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .section {
+
+    h2 {
+      font-size: 48px;
+      font-weight: 600;
+      letter-spacing: -0.045em;
+      padding-bottom: .4rem;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+  footer {
+    .inner {
+      flex-direction: column-reverse;
+      row-gap: 6px;
+    }
   }
 }

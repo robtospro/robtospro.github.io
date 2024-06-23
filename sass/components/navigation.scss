@@ -78,6 +78,8 @@
 
     span:nth-child(2) {
       opacity: 0;
+      //transform: translateX(5px);
+      transform: scale(0, 0.5);
     }
 
     span:nth-child(3) {
@@ -97,12 +99,19 @@
   border-left: 1px solid rgba(51, 51, 51, 0);
   border-bottom: 1px solid rgba(51, 51, 51, 0);
   border-radius: 0 0 0 1rem;
+  right: 0;
+  transform: translateX(0px);
   transition: $transition-time;
+
+  &.active {
+    transform: translateX(0); /* Slide in */
+    transition: $transition-time;
+  }
 
   a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
   }
 
   &.scrolled {

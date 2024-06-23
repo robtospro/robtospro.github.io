@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const hamburger = document.getElementById('hamburger');
     const mobileNav = document.getElementById('mobile-nav');
 
+    mobileNav.classList.remove('active');
+
     // Toggle mobile navigation
     hamburger.addEventListener('click', function (event) {
         event.stopPropagation(); // Prevent the click from propagating to the document
