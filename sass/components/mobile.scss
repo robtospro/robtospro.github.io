@@ -1,0 +1,17 @@
+@media only screen and (max-width: 667px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    //left: 0;
+    right: 0;
+  }
+}
