@@ -95,6 +95,7 @@ ul {
   padding: 10px 20px;
   max-width: 1000px;
   font-weight: 500;
+  margin: 0 auto;
 }
 .navbar.scrolled {
   box-shadow: inset 0 -1px 0 0 rgb(51, 51, 51);
