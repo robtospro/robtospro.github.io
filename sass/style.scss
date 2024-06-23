@@ -63,9 +63,14 @@ p, h1, h2, h3, h4, h5, h6 {
           "slnt" 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #040404;
+  background-color: #000;
   font-family: "Inter", sans-serif;
+  color: white;
 }
 
 ul {
@@ -78,20 +83,28 @@ ul {
 // NAVIGATION
 
 .navbar {
-  background-color: rgba(51, 51, 51, 0.45);
+  background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   width: 100%;
-  backdrop-filter: blur(5px);
-  outline: rgba(128, 128, 128, 0.65) solid 2px;
-}
+  backdrop-filter: blur(8px);
+  box-shadow: inset 0 -1px 0 0 rgba(51, 51, 51,0);
+  transition: .12s;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
-.navbar .inner {
-  display: flex;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  max-width: 800px;
+
+
+  .inner {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    max-width: 1000px;
+    font-weight: 500;
+  }
+
 }
 
 .navbar-logo img {
@@ -107,10 +120,67 @@ ul {
   color: #fff;
   text-decoration: none;
   padding: 8px 15px;
-  border-radius: 4px;
-  transition: background-color 0.3s;
+  border-radius: 5rem;
+  transition: .25s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.11);
+    box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.17);
+  }
 }
 
-.navbar-links a:hover {
-  background-color: #575757;
+.navbar.scrolled {
+  box-shadow: inset 0 -1px 0 0 rgba(51, 51, 51, 1);
+  transition: .25s;
+}
+
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: rgba(193, 91, 8, 0);
+  height: 10000px;
+}
+
+section {
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 6rem;
+  background-color: rgba(182, 156, 9, 0);
+}
+
+.hero {
+  font-family: "Montserrat", sans-serif;
+  height: 462px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/hero-banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  //height: 4000px;
+
+
+
+  .title {
+    font-size: max(80px,min(5vw,76px));
+    letter-spacing: -.08rem;
+    text-align: center;
+    background: linear-gradient(0deg, rgb(241, 241, 241) 0%, rgb(254, 254, 254) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+
+
+h2 {
+  font-size: 56px;
+  line-height: 1.0714285714;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.projects {
+  height: 600px;
 }
