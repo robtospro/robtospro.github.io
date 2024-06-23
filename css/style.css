@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+::selection {
+  background: rgba(255, 255, 255, 0.24);
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -74,7 +78,7 @@ html {
 body {
   background-color: #000;
   font-family: "Inter", sans-serif;
-  color: white;
+  color: #ebebeb;
 }
 
 ul {
@@ -85,7 +89,6 @@ ul {
 
 .navbar {
   background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
   width: 100%;
   backdrop-filter: blur(8px);
   box-shadow: inset 0 -1px 0 0 rgba(51, 51, 51, 0);
@@ -106,6 +109,12 @@ ul {
 
 .navbar-logo img {
   height: 40px;
+  filter: brightness(0.9);
+  transition: 0.25s;
+}
+.navbar-logo img:hover {
+  filter: brightness(1);
+  transition: 0.25s;
 }
 
 .navbar-links {
@@ -114,7 +123,7 @@ ul {
 }
 
 .navbar-links a {
-  color: #fff;
+  color: #d5d5d5;
   text-decoration: none;
   padding: 8px 15px;
   border-radius: 5rem;
@@ -123,6 +132,7 @@ ul {
 .navbar-links a:hover {
   background-color: rgba(255, 255, 255, 0.06);
   box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.17);
+  color: #ffffff;
 }
 
 .navbar.scrolled {
@@ -138,8 +148,8 @@ main {
 
 section {
   margin: 0 auto;
-  width: 100%;
-  padding: 2rem 6rem;
+  max-width: 1280px;
+  padding: 2rem 3rem;
   background-color: rgba(182, 156, 9, 0);
 }
 
@@ -156,22 +166,32 @@ section {
 }
 .hero .title {
   font-size: max(80px, min(5vw, 76px));
-  letter-spacing: -0.08rem;
+  letter-spacing: -2px;
   text-align: center;
-  background: linear-gradient(0deg, rgb(241, 241, 241) 0%, rgb(254, 254, 254) 100%);
+  text-shadow: rgba(0, 0, 0, 0.4) 1px 0 10px;
+  line-height: 4.5rem;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  user-select: none;
 }
 
-h2 {
+.section {
+  min-height: 300px;
+}
+.section h2 {
   font-size: 56px;
   line-height: 1.0714285714;
   font-weight: 600;
   letter-spacing: -0.005em;
+  padding-bottom: 0.5rem;
 }
 
-.projects {
-  height: 600px;
+.project {
+  box-shadow: inset 0 -4px 0px 0px rgba(51, 51, 51, 0.52);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  height: 150px;
 }
 
 footer {
@@ -185,7 +205,7 @@ footer .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: #d5d5d5;
 }
 footer .right {
   display: flex;
@@ -221,6 +241,12 @@ ul#footer-links a:hover {
 }
 .icon.light {
   filter: invert(0);
+}
+
+@media only screen and (max-width: 667px) {
+  .navbar-links {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
